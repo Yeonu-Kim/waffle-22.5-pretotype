@@ -9,10 +9,10 @@ export const useRouteNavigation = () => {
 
   return {
     toSurveyList: () => {
-      void navigate(SURVEY_LIST, { replace: true });
+      void navigate(SURVEY_LIST);
     },
     toSurveyDetail: ({ surveyId }: { surveyId: string }) => {
-      void navigate(CREATE.SURVEY_DETAIL({ surveyId }), { replace: true });
+      void navigate(CREATE.SURVEY_DETAIL({ surveyId }));
     },
   };
 };
