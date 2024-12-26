@@ -1,5 +1,11 @@
+import { Analytics } from '@vercel/analytics/react';
 import type { ReactNode } from 'react';
 
 export const Layout = ({ children }: { children: ReactNode }) => {
-  return <div className="flex flex-col max-w-[600px] m-auto">{children}</div>;
+  return (
+    <div className="flex flex-col max-w-[600px] m-auto">
+      {children}
+      <Analytics mode="production" />
+    </div>
+  );
 };
