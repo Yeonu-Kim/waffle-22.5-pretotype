@@ -1,5 +1,6 @@
 import './index.css';
 
+import { Analytics } from '@vercel/analytics/react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import { PATH } from './entities/routes';
@@ -20,5 +21,10 @@ const publicRoutes = [
 const routers = createBrowserRouter([...publicRoutes]);
 
 export const App = () => {
-  return <RouterProvider router={routers} />;
+  return (
+    <>
+      <RouterProvider router={routers} />
+      <Analytics mode="production" />
+    </>
+  );
 };
